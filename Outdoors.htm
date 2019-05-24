@@ -1,0 +1,714 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+body {
+  margin: 50px;
+  color: #323031;
+  background-color: #A3A866;
+  background-color: #2a9ec1;
+  font-family: 'Lato', sans-serif;
+}
+h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-family: 'Slabo 27px', sans-serif;
+  color: #ffc857;
+  text-align: center;
+  font-size: 2.5em;
+  margin: 0 0 65px 0;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin: 0 30px 5px 30px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 0.9em;
+  margin: 0 30px 5px 30px;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0 30px 0 30px;
+}
+
+#grid { 
+  margin: auto;
+  width: 90vw;
+  display: grid;
+  grid-row-gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+}
+
+.smallgrid { 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.textHolder {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.odd > .desc{
+  background-color: #017840;
+  z-index: 4;
+  width: 112%;
+  margin-left: -10.5%;
+  transform: perspective(1000px) rotateY(-30deg);
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  text-align: right;
+}
+
+.odd > .desc > .textHolder{
+  right: 0;
+}
+
+.even > .desc{
+  z-index: 2;
+  background-color: black;
+  width: 112%;
+  transform: perspective(1000px) rotateY(30deg);
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+}
+
+.even > .photo{
+  z-index: 3;
+  width: 150%;
+  margin-left: -23%;
+  transform: perspective(1000px) rotateY(-45deg);
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.odd > .photo{
+  z-index: 5;
+  width: 150%;
+  margin-left: -25%;
+  transform: perspective(1000px) rotateY(45deg);
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #013069;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #017840;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color:#0d3d00 ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: black;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #0d3d00;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+   
+}
+
+h3, h2, p, h1 {
+color:white;
+}
+
+
+
+
+
+
+</style>
+
+<div class="topnav">
+  <a class="active" href="Apple.htm">Me</a>
+  <a href="Hobbies.htm">Hobbies</a>
+  <a href="Friends.htm">Friends</a>
+  <a href="Baseball.htm">Baseball</a>
+  <a href="Outdoors.htm">Outdoors</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+
+<body>
+
+
+
+
+<!-- 
+For CSS Grid expertise:
+Rachel Andrew: https://gridbyexample.com/
+Jen Simmons: http://labs.jensimmons.com/
+ -->
+<h1>The Outdoors Are A Big Part Of Me And My Family's Life</h1>
+<div id="grid">
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+        <h3></h3>
+        <h2>2019 Youth Hunt</h2>
+        <p></p>
+      </div>
+    </div>
+    <div class="photo"><img src="hu.png"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+      <h3></h3>
+      <h2> 4 Ducks In Total</h2>
+      <p></p>
+      </div>
+    </div>
+    <div class="photo"><img src="h.png"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+      <h3></h3>
+      <h2>First Duck with My New Gun</h2>
+      <p></p></div>
+    </div>
+    <div class="photo"><img src="hi.png"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+      <h3></h3>
+      <h2>First Red Head Of The Season Too</h2>
+      <p></p></div>
+    </div>
+    <div class="photo"><img src="hd.png"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+      <h3></h3>
+      <h2>Nap</h2>
+      <p></p>
+    </div>
+    </div>
+    <div class="photo"><img src="N.png"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+        <h3></h3>
+        <h2>Time</h2>
+        <p></p>
+      </div>
+    </div>
+    <div class="photo"><img src="T.png"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3></h3>
+<h2>Great First hunt of the year</h2>
+<p></p>
+    </div>
+    </div>
+    <div class="photo"><img src="DO.png"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3></h3>
+<h2>record number of doves</h2>
+<p></p>
+    </div>
+    </div>
+    <div class="photo"><img src="D.png"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3></h3>
+<h2> My grandparents are some of my biggest role models </h2>
+<p></p>
+    </div>
+    </div>
+    <div class="photo"><img src="VV.png"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3></h3>
+<h2> They built this cabin by hand </h2>
+<p></p>
+     </div>
+   </div>
+    <div class="photo"><img src="G.png"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3></h3>
+<h2></h2>
+<p></p>
+    </div>
+    </div>
+    <div class="photo"><img src="tt.png"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3></h3>
+<h2></h2>
+<p></p>
+    </div>
+    </div>
+    <div class="photo"><img src="ttt.png"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>013: Nirvana</h3>
+<h2>In Utero</h2>
+<p>[1993 / DGC]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="tttt.png"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>014: Belle And Sebastian</h3>
+<h2>If You're Feeling Sinister</h2>
+<p>[1996 / Jeepster]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/14.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>015: Radiohead</h3>
+<h2>The Bends</h2>
+<p>[1995 / Capitol]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/15.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>016: The Dismemberment Plan</h3>
+<h2>Emergency & I</h2>
+<p>[1999 / DeSoto]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/16.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>017: Public Enemy</h3>
+<h2>Fear of a Black Planet</h2>
+<p>[1990 / Def Jam]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/17.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>018: Smashing Pumpkins</h3>
+<h2>Siamese Dream</h2>
+<p>[1993 / Virgin]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/18.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>019: Beck</h3>
+<h2>Odelay</h2>
+<p>[1996 / DGC]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/19.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>020: Björk</h3>
+<h2>Post</h2>
+<p>[1995 / Elektra]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/20.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>021: Björk</h3>
+<h2>Homogenic</h2>
+<p>[1997 / Elektra]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/21.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>022: Built To Spill</h3>
+<h2>Perfect From Now On</h2>
+<p>[1997 / Warner Bros.]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/22.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>023: The Beta Band</h3>
+<h2>The Three EPs</h2>
+<p>[1999 / Astralwerks]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/23.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>024: Built To Spill</h3>
+<h2>There's Nothing Wrong With Love</h2>
+<p>[1994 / Up]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/24.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>025: Yo La Tengo</h3>
+<h2>I Can Hear the Heart Beating As One</h2>
+<p>[1997 / Matador]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/25.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>026: Weezer</h3>
+<h2>Weezer (Blaues Album)</h2>
+<p>[1994 / DGC]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/26.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>027: Guided By Voices</h3>
+<h2>Alien Lanes</h2>
+<p>[1995 / Matador]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/27.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>028: Pixies</h3>
+<h2>Bossanova</h2>
+<p>[1990 / 4AD]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/28.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>029: Modest Mouse</h3>
+<h2>The Lonesome Crowded West</h2>
+<p>[1997 / Up]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/29.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>030: Liz Phair</h3>
+<h2>Exile In Guyville</h2>
+<p>[1993 / Matador]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/30.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>031: Wilco</h3>
+<h2>Summerteeth</h2>
+<p>[1999 / Reprise Records]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/31.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>032: The Notorious B.I.G.</h3>
+<h2>Ready to Die</h2>
+<p>[1994 / Bad Boy]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/32.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+        <h3>033: Nas</h3>
+        <h2>Illmatic</h2>
+<p>[1994 / Columbia]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/33.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>034: Beastie Boys</h3>
+<h2>Check Your Head</h2>
+<p>[1992 / Grand Royal]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/34.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>035: Boards Of Canada</h3>
+<h2>Music Has the Right to Children</h2>
+<p>[1998 / Warp]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/35.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>036. Wu-Tang Clan</h3>
+<h2>Enter the Wu-Tang (36 Chambers)</h2>
+<p>[1993 / Loud]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/36.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>037: The Magnetic Fields</h3>
+<h2>69 Lovesongs</h2>
+<p>[1999 / Merge]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/37.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>038: Jesus Lizard</h3>
+<h2>Goat</h2>
+<p>[1991 / Touch & Go]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/38.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>039: Olivia Tremor Control</h3>
+<h2>Dusk at Cubist Castle</h2>
+<p>[1996 / Flydaddy]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/39.jpg"></div>
+  </div>
+  <div class="smallgrid">
+    <div class="desc">
+      <div class="textHolder">
+<h3>040: Aphex Twin</h3>
+<h2>The Richard D. James Album</h2>
+<p>[1996 / Warp]</p>
+    </div>
+    </div>
+    <div class="photo"><img src="https://andybarefoot.com/codepen/images/albums/40.jpg"></div>
+  </div>
+</div>
+<!--
+Data: http://www.indiepedia.de/index.php/Top_100_Albums_of_the_1990s_(Pitchfork,_2003)
+
+Images: https://www.discogs.com/lists/Pitchfork-Best-Albums-of-the-90s/8539
+
+41. Yo La Tengo – Painful (1993 / Matador)
+42. Fugazi – Red Medicine (1995 / Dischord)
+43. R.E.M. – Automatic for the People (1992 / Warner Bros.)
+44. Boredoms – Super Ae (1998 / Birdman)
+45. Godspeed You Black Emperor! – F# A# Infinity (1998 / Kranky)
+46. Air – Moon Safari (1998 / Astralwerks)
+47. Oval – 94diskont (1995 / Thrill Jockey)
+48. Portishead – Dummy (1994 / Go! Discs)
+49. Tom Waits – Bone Machine (1992 / Island Records)
+50. Outkast – Aquemini (1998 / LaFace)
+51. Stereolab – Emperor Tomato Ketchup (1996 / Elektra)
+52. PJ Harvey – Rid of Me (1993 / Island Records)
+53. Weezer – Pinkerton (1991 / DGC)
+54. Blur – Parklife (1994 / SBK)
+55. Spiritualized – Ladies and Gentlemen, We Are Floating in Space (1997 / Dedicated)
+56. A Tribe Called Quest – The Low-End Theory (1991 / Jive)
+57. Brainiac – Bonsai Superstar (1994 / Grass)
+58. Jesus Lizard – Liar (1992 / Touch & Go)
+59. Elliott Smith – Either/Or (1997 / Kill Rock Stars)
+60. Palace Music – Viva Last Blues (1995 / Drag City)
+61. Pulp – Different Class (1995 / Island Records)
+62. Aphex Twin – Selected Ambient Works, Vol.II (1994 / Warp)
+63. De La Soul – De La Soul Is Dead (1991 / Tommy Boy)
+64. The Breeders – Last Splash (1993 / 4AD)
+65. Daft Punk – Homework (1997 / Virgin)
+66. Tricky – Maxinquaye (1995 / Island Records)
+67. Mouse On Mars – Iaora Tahiti (1995 / Too Pure)
+68. Elliott Smith – XO (1998 / Dreamworks)
+69. Jeff Buckley – Grace (1994 / Columbia)
+70. Jawbox – For Your Own Special Sweetheart (1994 / Atlantic)
+71. Dr. Octagon – Octagonecologyst (1996 / Dreamworks)
+72. Silver Jews – American Water (1998 / Drag City)
+73. Brainiac – Hissing Prigs in Static Couture (1996 / Touch & Go)
+74. Ride – Nowhere (1990 / Sire)
+75. A Tribe Called Quest – Midnight Marauders (1993 / Jive)
+76. Mercury Rev – Deserter's Songs (1998 / V2)
+77. Primal Scream – Screamadelica (1991 / Sire)
+78. Stereolab – Mars Audiac Quintet (1994 / Elektra)
+79. Dr. Dre – The Chronic (1992 / Death Row)
+80. The Pharcyde – Bizarre Ride II The Pharcyde (1992 / Delicious Vinyl)
+81. The Breeders – Pod (1990 / 4AD)
+82. Sonic Youth Goo (1990 / DGC)
+83. Pixies – Tromple le Monde (1991 / 4AD)
+84. Company Flow – Funcrusher Plus (1997 / Rawkus)
+85. Massive Attack – Blue Lines (1991 / Virgin)
+86. Destroy – City of Daughters (1998 / Triple Crown)
+87. GZA/Genius – Liquid Swords (1995 / Geffen)
+88. Wilco – Being There (1996 / Reprise Records)
+89. Squarepusher – Music Is Rotted One Note (1999 / Warp)
+90. Cocteau Twins – Heaven or Las Vegas (1990 / 4AD)
+91. Tortoise – TNT (1998 / Thrill Jockey)
+92. Scott Walker – Tilt (1995 / Drag City)
+93. Bob Dylan – Time Out Of Mind (1997 / Columbia)
+94. Frank Black – Teenager of the Year (1994 / 4AD)
+95. Massive Attack – Mezzanine (1998 / Virgin)
+96. Herbert – Around the House (1998 / !K7)
+97. Mogwai – Young Team (1997 / Jetset)
+98. KMD – Mr. Hood (1991 / Asylum)
+99. Raekwon – Only Built 4 Cuban Linx (1995 / Loud)
+100. The Orb – The Orb's Adventures Beyond the Ultraworld (1991 / Big Life)
+-->
+
+</body>
+
+
+
+
+
+<script>
+function alternate(){
+  colsno = window.getComputedStyle(document.getElementById("grid")).gridTemplateColumns.split(' ').length;
+  smallgrids = document.getElementsByClassName("smallgrid");
+  for(i=0;i<smallgrids.length;i++){
+    thisrow = Math.floor(i/colsno);
+    thiscol = i%colsno;
+    if((thisrow+thiscol)%2==1){
+      smallgrids[i].setAttribute('class', 'smallgrid even');
+    }else{
+      smallgrids[i].setAttribute('class', 'smallgrid odd');
+    }
+  }
+}
+
+window.onload = alternate();
+window.addEventListener("resize", alternate);
+
+</script>
+
+
+
+</html>

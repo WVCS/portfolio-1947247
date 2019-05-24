@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #013069;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #017840;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #0d3d00;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #0d3d00;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background:#0d3d00 ;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #017840;  
+  }
+   
+}
+
+h1 { 
+text-align: center;
+
+}
+
+li{
+color: white;}
+
+
+h2 {
+text-align: center;
+color: white;}
+
+
+p {
+text-align: center;
+color:white;}
+
+
+h3 {
+text-align: right;}
+
+
+
+</style>
+</head>
+
+
+
+
+
+<body>
+
+<div class="topnav">
+  <a class="active" href="Apple.htm">Me</a>
+  <a href="Hobbies.htm">Hobbies</a>
+  <a href="Friends.htm">Friends</a>
+  <a href="Baseball.htm">Baseball</a>
+  <a href="Outdoors.htm">Outdoors</a> 
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+<div style="padding-left:16px">
+  <h1>MY HOBBIES</h1>
+  <p><div style="padding-left:16px">
+  <ul>
+  <li> I really enjoy hanging with friends. </li>
+  <li> My non profit organization "Get Out!" is very important to me, and it is very fun to teach kids how to have fun outdoors, which is the main focus if the organization. </li>
+  <li>  I like listening to country and rock music with my dad any chance I get. </li>
+  </ul>
+  <h1>Jason Wright</h1>
+  <h2> "JASON CHRISTOPHER WRIGHT"  </h2>
+  <p> This name is one I intend to build a great life upon, as well as make others better with it too. </p>
+</p>
+  
+</div>
+
+
+
+
+
+
+</body>
+
+
+
+
+
+	<html>
+
+
+
+
+
+
+<div style="padding-left:16px">
+
+
+
+<style>
+body {
+	background-color: #017840;
+	background-image: https://res.cloudinary.com/jerrick/image/upload/f_auto,fl_progressive,q_auto,c_fit,w_990/ikwbauugawgk7wtdsfbs("Web Sites/Link Folder/images/ikwbauugawgk7wtdsfbs.gif");
+	background-repeat: repeat-y;
+}
+h1 {	background-color: #017840 ;
+	color: #017840;
+	border-color: medium ;
+	padding: 25px;
+	text-align: center;
+	letter-spacing: 4px;
+	text-shadow: 3px 2px #013069;
+}
+p {
+	font-family: Arial, Helvetica, sans-serigf;
+}
+food{ 
+	color: salmon;
+	font-size: 125%;
+}
+div{
+	background-color: #013069;
+	border: 25px solid lighgrey;
+	padding: 25px 
+	
+}
+
+</div>
+</p>
+</h1> 
+</style>
+<body>
+<h1> Trivia </h1> 
+<p> 
+Video Game Trivia
+
+        <br />
+
+        Asking question <span id="NumberAsked">1</span> of 10 with <span id="NumberCorrect">0</span> answers correct</p>
+
+    <p>
+
+        <span id="TriviaQuestion">???</span>
+
+    </p>
+
+    <p>
+
+        &nbsp;
+
+        <input id="RadioTrue" type="radio" value="true" name="answer" checked="checked" /> True
+
+        &nbsp;&nbsp;&nbsp;
+
+        <input id="RadioFalse" type="radio" value="false" name="answer" /> False
+
+    </p>
+
+    <p>
+
+        <input id="ButtonContinue" onclick="checkAnswer();" type="button" value="continue" />
+
+    </p>
+
+ 
+
+    <script language="javascript" type="text/javascript">
+
+        // Array of trivia data
+
+        var TriviaData = new Array(10)
+
+        createTwoDimensionalArray(3);
+
+ 
+
+        // Variables to track state of the game
+
+        // i.e. number questions asked, current correct total and current question
+
+        var questionsAsked = 0;
+
+        var totalCorrect = 0;
+
+        var currentQuestion = 0;
+
+        var selectionValid = false;
+
+ 
+
+        // Questions
+
+        TriviaData[0][0] = "I am a hunter.";
+
+        TriviaData[1][0] = "My middle name is Christopher.";
+
+        TriviaData[2][0] = "I once worked at a golf course.";
+
+        TriviaData[3][0] = "I was born 3 months early.";
+
+        TriviaData[4][0] = "I can play the piano.";
+
+        TriviaData[5][0] = "History is my favorite class.";
+
+        TriviaData[6][0] = "I used to play soccer.";
+
+        TriviaData[7][0] = " I used to play football.";
+
+        TriviaData[8][0] = "I was born in San Fransisco.";
+
+        TriviaData[9][0] = "I hate star wars.";
+
+   
+
+        // Answers
+
+        TriviaData[0][1] = "true";
+
+        TriviaData[1][1] = "true";
+
+        TriviaData[2][1] = "false";
+
+        TriviaData[3][1] = "true";
+
+        TriviaData[4][1] = "true";
+
+        TriviaData[5][1] = "true";
+
+        TriviaData[6][1] = "false";
+
+        TriviaData[7][1] = "false";
+
+        TriviaData[8][1] = "true";
+
+        TriviaData[9][1] = "false";
+
+ 
+
+        // Has question been asked
+
+        // -- necessary because we are asking in random order
+
+        TriviaData[0][2] = "no";
+
+        TriviaData[1][2] = "no";
+
+        TriviaData[2][2] = "no";
+
+        TriviaData[3][2] = "no";
+
+        TriviaData[4][2] = "no";
+
+        TriviaData[5][2] = "no";
+
+        TriviaData[6][2] = "no";
+
+        TriviaData[7][2] = "no";
+
+        TriviaData[8][2] = "no";
+
+        TriviaData[9][2] = "no";
+
+ 
+
+        // Load up first question
+
+        setQuestion();
+
+ 
+
+        // Sets question text and indicator so that we know the question has been displayed
+
+        function setQuestion() {
+
+            selectionValid = false; // Flag to make sure question has not been asked yet
+
+            while (selectionValid == false) {
+
+                currentQuestion = Math.floor(Math.random() * 10); // randomly select starting question
+
+                if (TriviaData[currentQuestion][2] == "no") {
+
+                    selectionValid = true;
+
+                }
+
+            }
+
+            document.getElementById("TriviaQuestion").innerHTML = TriviaData[currentQuestion][0];
+
+            TriviaData[currentQuestion][2] = "yes";
+
+            questionsAsked = questionsAsked + 1;
+
+        }
+
+ 
+
+        function processAnswer(myAnswer) {
+
+            if (TriviaData[currentQuestion][1] == myAnswer) {
+
+                // answer correct
+
+                totalCorrect = totalCorrect + 1;
+
+            }
+
+        }
+
+ 
+
+        // This function creates our two dimensional array
+
+        function createTwoDimensionalArray(arraySize) {
+
+            for (i = 0; i < TriviaData.length; ++i)
+
+                TriviaData[i] = new Array(arraySize);
+
+        }
+
+ 
+
+        // This function checks the answer, updates correct total
+
+        // and randomly selects the next question
+
+        function checkAnswer() {
+
+            if (document.getElementById("RadioTrue").checked) {
+
+                processAnswer("true");
+
+            }
+
+            else {
+
+                processAnswer("false");
+
+            }
+
+            // get next question if not asked all yet
+
+            if (questionsAsked < 10) {
+
+                setQuestion();
+
+            }
+
+            // final question asked - disable button and show final results
+
+            else {
+
+                alert("Quiz complete! You got " + totalCorrect + " correct out of 10.");
+
+                document.getElementById("ButtonContinue").disabled = true;
+
+            }
+
+            // update totals
+
+            document.getElementById("NumberAsked").innerHTML = questionsAsked;
+
+            document.getElementById("NumberCorrect").innerHTML = totalCorrect;
+
+        }
+
+ 
+
+    </script>
+	</html> </p>
+<div>
+
+
+</div>
+<h1> SPORTS </h1>
+<P> <img src= "sports.png"> </p>
+	
+<h1> ENGENIERING </h1>
+<ul>
+<li> My grandpa was the person who first got me into tinkering with stuff, he just had a nack for make something cool out of almost nothing. The first project that we worked on together was putting a model train back together one year for christmas. The most memerable project that we ever worked on together on wa a two way radio that we made so I could listen to him talk to his other ham radio friends with.  </li> 
+ <h2><img src= "yyy.png"> </h2> 
+</ul>
+  
+<h1> WORKING OUT </h1>
+<ul>
+<li> I Take a lot of pride in my physical condition, not only for looking good, but more to preform better in sports. </ul>
+<li> My workouts rang from straight lifting, P90X-2, P90X-3, speed and agility, and also cross training excersizes like boxing and swimming. </li>
+</ul>	
+<h1 class="food"> Family </h1>
+<ul>
+<li> Family is very important to me, they are behind me on every decision I make, good or bad. They very loving and caring to everyone they meet, and have tought my sister and I all the skills we need to build quality relaionships, just like them.  </li>
+</ul>
+<img-src= "http://lookbeforespending.com/wp-content/uploads/2012/11/mlb-sweatshirts.png"
+
+
+
+
+
+</body>
+
+
+<a href="">
+<img src= >  </a>      <a href=" ">   <img src= > <img src=  >  </a>    
+</html>
+
+
